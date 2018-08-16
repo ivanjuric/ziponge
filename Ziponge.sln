@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchiveBackup", "ArchiveBackup\ArchiveBackup.csproj", "{14FDC215-5650-446F-841A-24397FACBB3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZipongeApp", "ArchiveBackup\ZipongeApp.csproj", "{14FDC215-5650-446F-841A-24397FACBB3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipongeCore", "Ziponge.Core\ZipongeCore.csproj", "{EDA38089-4DBA-4291-84E9-48F13EEFDD40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{14FDC215-5650-446F-841A-24397FACBB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14FDC215-5650-446F-841A-24397FACBB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14FDC215-5650-446F-841A-24397FACBB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA38089-4DBA-4291-84E9-48F13EEFDD40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA38089-4DBA-4291-84E9-48F13EEFDD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA38089-4DBA-4291-84E9-48F13EEFDD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA38089-4DBA-4291-84E9-48F13EEFDD40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
