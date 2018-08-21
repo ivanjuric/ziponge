@@ -32,6 +32,15 @@ namespace ZipongeCore
 
             // 2. Create temporary directory for matched files
             var archiveTempDirPath = Path.Combine(dirPathDest, searchSubstring);
+
+            // Do not ovewrite existing backup archive if already exists
+            var archiveFilePath = $"{archiveTempDirPath}.zip";
+            if(File.Exists(archiveFilePath))
+            {
+                _logger.LogWarning($"File {archiveFilePath} already exists!");
+                return;
+            }
+
             if (!Directory.Exists(archiveTempDirPath))
                 Directory.CreateDirectory(archiveTempDirPath);
             _logger.LogInformation($"Temp directory path: {archiveTempDirPath}!");
@@ -49,7 +58,6 @@ namespace ZipongeCore
             }
 
             // 4. Archive files from temporary directory
-            var archiveFilePath = $"{archiveTempDirPath}.zip";
             ZipFile.CreateFromDirectory(archiveTempDirPath, archiveFilePath);
             _logger.LogInformation($"Created archive {archiveFilePath}");
 
