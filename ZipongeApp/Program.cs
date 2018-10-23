@@ -46,7 +46,7 @@ namespace ZipongeApp
             logger.LogInformation(paramInfo);
 
             // Create archives for specified dates
-            var ziponge = new Ziponge(loggerFactory);
+            var ziponge = new Ziponge();
             ziponge.Execute(dirPathSrc, dirPathDest, dateFrom, dateTo);
 
             Console.ReadLine();
