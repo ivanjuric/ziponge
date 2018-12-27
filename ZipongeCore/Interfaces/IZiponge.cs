@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZipongeCore
+namespace ZipongeCore.Interfaces
 {
     public interface IZiponge
     {

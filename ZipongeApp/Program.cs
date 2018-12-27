@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
+using ZipongeApp.Logging;
 using ZipongeCore;
 
 namespace ZipongeApp
@@ -10,7 +11,7 @@ namespace ZipongeApp
         {
             // Configure logger and output to console
             var loggerFactory = new LoggerFactory().AddConsole();
-            var logger = loggerFactory.CreateLogger("ZipongeApp");
+            var logger = new LoggerAdapter<Program>(loggerFactory);
 
             // Read and validate args
             var expectedArgsLength = 4;
@@ -46,7 +47,8 @@ namespace ZipongeApp
             logger.LogInformation(paramInfo);
 
             // Create archives for specified dates
-            var ziponge = new Ziponge();
+            var zipLogger = new LoggerAdapter<Ziponge>(loggerFactory);
+            var ziponge = new Ziponge(zipLogger);
             ziponge.Execute(dirPathSrc, dirPathDest, dateFrom, dateTo);
 
             Console.ReadLine();
